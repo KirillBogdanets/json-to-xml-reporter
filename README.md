@@ -7,7 +7,7 @@ npm install jsonToXml
 ### Usage
 If you want to create xml report from json report it will look like this:
 ```
-const parser = require('jsonToXml')
+const parser = require('jsonReporterToXml')
 
 parser.jsonToXmlParser(pathToTheJsonFile, xmlReporterName, pathToTheXmlReporter)
 ```
