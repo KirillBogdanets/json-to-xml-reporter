@@ -18,9 +18,12 @@ class XmlParser {
         try {
             const jsonResultsObj = require(path.resolve(pathToJson));
 
+            this.toXml.push('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>');
+            this.toXml.push('\n<testsuites>\n');
             this.toXml.push(this._testSuiteInfo(jsonResultsObj.stats));
             this._testCasesInfo(jsonResultsObj.suites);
             this.toXml.push('\n</testsuite>');
+            this.toXml.push('\n</testsuites>');
 
             fs.existsSync(folderName) || fs.mkdirSync(folderName);
             fs.writeFileSync(`./${folderName}/${filename}.xml`, this.toXml.join(''));
