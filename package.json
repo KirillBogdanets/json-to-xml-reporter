@@ -1,6 +1,6 @@
 {
   "name": "json-to-xml-reporter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "tool for parsing json report and creating xml report",
   "main": "./parser/jsonReporterToXml.js",
   "scripts": {
