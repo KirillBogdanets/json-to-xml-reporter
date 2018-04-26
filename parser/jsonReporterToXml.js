@@ -70,7 +70,7 @@ class XmlParser {
     _testsInfo(tests, suit) {
         tests.forEach(value => {
             if (value.err && value.err.message) {
-            this.toXml.push(`\n<testcase classname="${suit.title}" name="${value.title}" time="${value.duration / 1000}"><failure>${value.err.message}\n${value.err.estack}</failure></testcase>`);
+            this.toXml.push(`\n<testcase classname="${suit.title}" name="${value.title}" time="${value.duration / 1000}"><failure>${value.err.message}</failure></testcase>`);
         } else {
             this.toXml.push(`\n<testcase classname="${suit.title}" name="${value.title}" time="${value.duration / 1000}"/>`);
         }
